@@ -45,6 +45,8 @@ This will install `http-server` globally so that it may be run from the command 
 
 `--cors` Enable CORS via the `Access-Control-Allow-Origin` header
 
+`--origins` JS regex pattern that if matched and cors is enabled, will allow the request by attaching the requesting origin as the `Access-Control-Allow-Origin` header.  If not matched, no `Access-Control-Allow-Origin` will be set and the request will be denied by user agents that enforce cors.  If cors is enabled, but this flag is not set, all origins will be allowed.
+
 `-o` Open browser window after starting the server
 
 `-c` Set cache time (in seconds) for cache-control max-age header, e.g. `-c10` for 10 seconds (defaults to `3600`). To disable caching, use `-c-1`.
